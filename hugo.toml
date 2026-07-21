@@ -1,24 +1,16 @@
-baseURL = 'https://Du-Huan-1123.github.io/'
-languageCode = 'zh-cn'
-title = '我的技术博客'
+﻿baseURL = 'https://du-huan-1123.github.io/'
+locale = 'zh-cn'
+title = '技术分享'
 theme = 'PaperMod'
 
-# PaperMod 主题配置
 [params]
   env = 'production'
   description = '个人技术博客'
   author = '博主'
-
-  # 显示阅读时间
   ShowReadingTime = true
-
-  # 显示代码复制按钮
   ShowCodeCopyButtons = true
-
-  # 默认暗色模式
   defaultTheme = 'auto'
 
-# 菜单配置
 [menu]
   [[menu.main]]
     identifier = 'archives'
@@ -36,6 +28,5 @@ theme = 'PaperMod'
     url = '/about/'
     weight = 15
 
-# 搜索功能
 [outputs]
   home = ['HTML', 'RSS', 'JSON']
