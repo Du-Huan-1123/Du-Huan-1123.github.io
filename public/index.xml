@@ -1,13 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>我的技术博客</title><link>https://Du-Huan-1123.github.io/</link><description>Recent content on 我的技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://Du-Huan-1123.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World - 我的第一篇博客</title><link>https://Du-Huan-1123.github.io/posts/hello-world/</link><pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate><guid>https://Du-Huan-1123.github.io/posts/hello-world/</guid><description>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</description></item><item><title>关于我</title><link>https://Du-Huan-1123.github.io/about/</link><pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate><guid>https://Du-Huan-1123.github.io/about/</guid><description>&lt;h2 id="-你好"&gt;👋 你好&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>技术分享</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on 技术分享</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World - 我的第一篇博客</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</description>
+    </item>
+    <item>
+      <title>Hermes Agent 介绍与安装部署指南</title>
+      <link>http://localhost:1313/posts/hermes-agent-intro/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hermes-agent-intro/</guid>
+      <description>Hermes Agent 是由 Nous Research 开发的开源 AI Agent 框架，支持跨平台、可执行、可记忆、可扩展。本文介绍其核心特性和 Windows 安装部署流程。</description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;-你好&#34;&gt;👋 你好&lt;/h2&gt;
 &lt;p&gt;我是一名程序员，这个博客用来记录技术学习和分享。&lt;/p&gt;
-&lt;h2 id="-技术栈"&gt;️ 技术栈&lt;/h2&gt;
+&lt;h2 id=&#34;-技术栈&#34;&gt;️ 技术栈&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;后端：Python, Java&lt;/li&gt;
 &lt;li&gt;前端：Vue, React&lt;/li&gt;
 &lt;li&gt;其他：Docker, Linux&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="-联系方式"&gt;📫 联系方式&lt;/h2&gt;
+&lt;h2 id=&#34;-联系方式&#34;&gt;📫 联系方式&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;GitHub: &lt;a href="https://github.com/Du-Huan-1123"&gt;https://github.com/Du-Huan-1123&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Email: &lt;a href="mailto:2060578353@qq.com"&gt;2060578353@qq.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Du-Huan-1123&#34;&gt;https://github.com/Du-Huan-1123&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Email: &lt;a href=&#34;mailto:2060578353@qq.com&#34;&gt;2060578353@qq.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

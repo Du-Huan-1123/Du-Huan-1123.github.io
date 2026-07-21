@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on 技术分享</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on 技术分享</description>
+    <title>开源 on 技术分享</title>
+    <link>http://localhost:1313/tags/%E5%BC%80%E6%BA%90/</link>
+    <description>Recent content in 开源 on 技术分享</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello World - 我的第一篇博客</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</description>
-    </item>
+    <atom:link href="http://localhost:1313/tags/%E5%BC%80%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hermes Agent 介绍与安装部署指南</title>
       <link>http://localhost:1313/posts/hermes-agent-intro/</link>
