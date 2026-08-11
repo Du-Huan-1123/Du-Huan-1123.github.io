@@ -9,6 +9,69 @@
     <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>👤 关于我</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;-你好&#34;&gt;👋 你好&lt;/h2&gt;
+&lt;p&gt;我是 &lt;strong&gt;Du Huan&lt;/strong&gt;，一名专注于交通数据分析与软件开发的工程师。&lt;/p&gt;
+&lt;p&gt;这个博客用来记录我在技术学习和项目实践中的思考与总结。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-技术栈&#34;&gt;🛠️ 技术栈&lt;/h2&gt;
+&lt;h3 id=&#34;后端开发&#34;&gt;后端开发&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt;: 数据处理、深度学习、自动化脚本&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java&lt;/strong&gt;: 企业级应用开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;前端开发&#34;&gt;前端开发&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vue.js&lt;/strong&gt;: 单页应用开发&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;React&lt;/strong&gt;: 组件化开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据与ai&#34;&gt;数据与AI&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;深度学习&lt;/strong&gt;: PyTorch, TensorFlow&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据分析&lt;/strong&gt;: Pandas, NumPy&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;交通领域&lt;/strong&gt;: Seq2Seq模型、多源数据融合、拥堵预测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工具与环境&#34;&gt;工具与环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;容器化&lt;/strong&gt;: Docker&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: Linux (Ubuntu/WSL)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版本控制&lt;/strong&gt;: Git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;博客&lt;/strong&gt;: Hugo + GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-研究方向&#34;&gt;📚 研究方向&lt;/h2&gt;
+&lt;h3 id=&#34;1-港区交通拥堵预测&#34;&gt;1. 港区交通拥堵预测&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 Seq2Seq 的多源特征融合预测模型&lt;/li&gt;
+&lt;li&gt;融合交通流、EIR（设备交接单）、气象、时空信息&lt;/li&gt;
+&lt;li&gt;论文：《基于多源特征融合的Seq2Seq港区交通拥堵预测方法》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-舆情新闻自动分类&#34;&gt;2. 舆情新闻自动分类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;规则主导的混合检索分类系统&lt;/li&gt;
+&lt;li&gt;CPU 环境下的轻量化部署方案&lt;/li&gt;
+&lt;li&gt;四级标签分类 + 情感分析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-ai-agent-应用&#34;&gt;3. AI Agent 应用&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Hermes Agent 部署与定制&lt;/li&gt;
+&lt;li&gt;多平台接入（微信、Telegram等）&lt;/li&gt;
+&lt;li&gt;技能开发与工作流自动化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-联系方式&#34;&gt;📫 联系方式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/Du-Huan-1123&#34;&gt;Du-Huan-1123&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a href=&#34;mailto:2060578353@qq.com&#34;&gt;2060578353@qq.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-关于这个博客&#34;&gt;💡 关于这个博客&lt;/h2&gt;
+&lt;p&gt;这个博客使用以下技术栈搭建：&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Hello World - 我的第一篇博客</title>
       <link>http://localhost:1313/posts/hello-world/</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
@@ -21,25 +84,6 @@
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/hermes-agent-intro/</guid>
       <description>Hermes Agent 是由 Nous Research 开发的开源 AI Agent 框架，支持跨平台、可执行、可记忆、可扩展。本文介绍其核心特性和 Windows 安装部署流程。</description>
-    </item>
-    <item>
-      <title>关于我</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;-你好&#34;&gt;👋 你好&lt;/h2&gt;
-&lt;p&gt;我是一名程序员，这个博客用来记录技术学习和分享。&lt;/p&gt;
-&lt;h2 id=&#34;-技术栈&#34;&gt;️ 技术栈&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;后端：Python, Java&lt;/li&gt;
-&lt;li&gt;前端：Vue, React&lt;/li&gt;
-&lt;li&gt;其他：Docker, Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;-联系方式&#34;&gt;📫 联系方式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/Du-Huan-1123&#34;&gt;https://github.com/Du-Huan-1123&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Email: &lt;a href=&#34;mailto:2060578353@qq.com&#34;&gt;2060578353@qq.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
