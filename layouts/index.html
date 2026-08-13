@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<meta name="generator" content="Hugo 0.164.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技术分享</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/home.css" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+    <!-- 背景渐变 -->
     <div class="bg-gradient"></div>
 
-    
+    <!-- 装饰气泡 -->
     <div class="bubble b1"></div>
     <div class="bubble b2"></div>
     <div class="bubble b3"></div>
@@ -21,7 +20,7 @@
     <div class="bubble b6"></div>
 
     <div class="hero">
-        
+        <!-- 左侧文字区 -->
         <div class="hero-text">
             <h1 class="main-title">
                 Hi,<br>
@@ -52,11 +51,11 @@
             </div>
         </div>
 
-        
+        <!-- 右侧照片区 -->
         <div class="hero-photo-area">
             <div class="photo-bg-circle"></div>
             <div class="photo-cutout">
-                <img src="/images/avatar.jpg" alt="Du Huan" class="hero-img">
+                <img src="{{ "images/avatar.jpg" | relURL }}" alt="Du Huan" class="hero-img">
             </div>
             <div class="float-card">
                 <div class="fc-now">NOW</div>
@@ -66,42 +65,27 @@
         </div>
     </div>
 
-    
+    <!-- 最新文章 -->
     <section class="latest-section">
         <h2 class="section-title">📝 最新文章</h2>
         <div class="posts-grid">
-            
-            <a href="https://du-huan-1123.github.io/posts/hello-world/" class="post-card">
-                <h3>Hello World - 我的第一篇博客</h3>
-                <p>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</p>
+            {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+            <a href="{{ .Permalink }}" class="post-card">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Summary | truncate 80 }}</p>
                 <div class="post-meta">
-                    <span>2026-07-09</span>
-                    
-                    <span class="tag">博客</span>
-                    
-                    <span class="tag">Hugo</span>
-                    
+                    <span>{{ .Date.Format "2006-01-02" }}</span>
+                    {{ range first 2 .Params.tags }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
                 </div>
             </a>
-            
-            <a href="https://du-huan-1123.github.io/posts/hermes-agent-intro/" class="post-card">
-                <h3>Hermes Agent 介绍与安装部署指南</h3>
-                <p>Hermes Agent 是由 Nous Research 开发的开源 AI Agent 框架，支持跨平台、可执行、可记忆、可扩展。本文介绍其核心特性和 …</p>
-                <div class="post-meta">
-                    <span>2026-07-09</span>
-                    
-                    <span class="tag">AI Agent</span>
-                    
-                    <span class="tag">Hermes</span>
-                    
-                </div>
-            </a>
-            
+            {{ end }}
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 Du Huan. Made with ❤️</p>
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Made with ❤️</p>
     </footer>
 </body>
 </html>

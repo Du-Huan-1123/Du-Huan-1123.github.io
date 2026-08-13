@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>技术分享</title>
-    <link>http://localhost:1313/</link>
+    <link>https://du-huan-1123.github.io/</link>
     <description>Recent content on 技术分享</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://du-huan-1123.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>👤 关于我</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://du-huan-1123.github.io/about/</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://du-huan-1123.github.io/about/</guid>
       <description>&lt;h2 id=&#34;-你好&#34;&gt;👋 你好&lt;/h2&gt;
 &lt;p&gt;我是 &lt;strong&gt;Du Huan&lt;/strong&gt;，一名专注于交通数据分析与软件开发的工程师。&lt;/p&gt;
 &lt;p&gt;这个博客用来记录我在技术学习和项目实践中的思考与总结。&lt;/p&gt;
@@ -73,16 +73,16 @@
     </item>
     <item>
       <title>Hello World - 我的第一篇博客</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>https://du-huan-1123.github.io/posts/hello-world/</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>https://du-huan-1123.github.io/posts/hello-world/</guid>
       <description>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</description>
     </item>
     <item>
       <title>Hermes Agent 介绍与安装部署指南</title>
-      <link>http://localhost:1313/posts/hermes-agent-intro/</link>
+      <link>https://du-huan-1123.github.io/posts/hermes-agent-intro/</link>
       <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hermes-agent-intro/</guid>
+      <guid>https://du-huan-1123.github.io/posts/hermes-agent-intro/</guid>
       <description>Hermes Agent 是由 Nous Research 开发的开源 AI Agent 框架，支持跨平台、可执行、可记忆、可扩展。本文介绍其核心特性和 Windows 安装部署流程。</description>
     </item>
   </channel>

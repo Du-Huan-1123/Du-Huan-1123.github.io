@@ -1,0 +1,456 @@
+/* 首页样式 - 参考小红书风格 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 背景渐变 */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffeef8 0%, #fff5e6 30%, #e8f4f8 60%, #f0e6ff 100%);
+    z-index: -2;
+}
+
+/* 装饰气泡 */
+.bubble {
+    position: fixed;
+    border-radius: 50%;
+    z-index: -1;
+    animation: floatBubble 10s ease-in-out infinite;
+}
+
+.b1 {
+    left: 5%;
+    top: 10%;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 182, 193, 0.3);
+    animation-delay: 0s;
+}
+
+.b2 {
+    right: 10%;
+    top: 5%;
+    width: 80px;
+    height: 80px;
+    background: rgba(173, 216, 230, 0.4);
+    animation-delay: 2s;
+}
+
+.b3 {
+    left: 15%;
+    bottom: 20%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 218, 185, 0.3);
+    animation-delay: 4s;
+}
+
+.b4 {
+    right: 20%;
+    bottom: 15%;
+    width: 90px;
+    height: 90px;
+    background: rgba(221, 160, 221, 0.3);
+    animation-delay: 1s;
+}
+
+.b5 {
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgba(144, 238, 144, 0.2);
+    animation-delay: 3s;
+}
+
+.b6 {
+    right: 30%;
+    top: 40%;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 150, 0.25);
+    animation-delay: 5s;
+}
+
+@keyframes floatBubble {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+/* Hero 主区域 */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    min-height: 90vh;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* 左侧文字区 */
+.hero-text {
+    animation: slideInLeft 0.8s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hello-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.green-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+}
+
+.role-title {
+    font-size: 1.3rem;
+    color: #8b5cf6;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.file-box {
+    margin-bottom: 2rem;
+}
+
+.file-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.file-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 480px;
+}
+
+/* 技能标签 */
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+.pill {
+    padding: 0.45rem 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #444;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.pill:hover {
+    background: linear-gradient(135deg, #ff6b9d, #c06c84);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+}
+
+/* 按钮 */
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-dark {
+    padding: 0.85rem 2rem;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-dark:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light {
+    padding: 0.85rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.btn-light:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 右侧照片区 */
+.hero-photo-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInRight 0.8s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.photo-bg-circle {
+    position: absolute;
+    width: 320px;
+    height: 420px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.5), rgba(255, 182, 193, 0.3));
+    z-index: 0;
+}
+
+.photo-cutout {
+    position: relative;
+    z-index: 1;
+    padding: 8px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.hero-img {
+    width: 300px;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+/* 浮动卡片 */
+.float-card {
+    position: absolute;
+    bottom: 15%;
+    right: 0%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 1.3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.fc-now {
+    font-size: 0.7rem;
+    color: #999;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.fc-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.15rem;
+}
+
+.fc-desc {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* 最新文章 */
+.latest-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.post-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.post-card p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.82rem;
+    color: #aaa;
+}
+
+.tag {
+    padding: 0.15rem 0.6rem;
+    background: linear-gradient(135deg, #ff6b9d, #c06c84);
+    color: white;
+    border-radius: 10px;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: #bbb;
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* 响应式 */
+@media (max-width: 968px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-photo-area {
+        order: -1;
+    }
+
+    .photo-bg-circle {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-img {
+        width: 260px;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}

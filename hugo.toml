@@ -38,8 +38,41 @@ ignoreFieldLocation = true
 
 # 主页简介
 [params.homeInfoParams]
-Title = "你好，欢迎来到我的博客 👋"
-Content = "这里记录我在交通数据分析、深度学习、软件工程方面的学习与实践。"
+Title = "你好，我是 Du Huan 👋"
+Content = "一名热爱技术的工程师，专注于交通数据分析、深度学习和软件工程。这里记录我的学习历程和技术思考。"
+
+# 技能标签
+[[params.skills]]
+name = "Python"
+delay = "0"
+
+[[params.skills]]
+name = "深度学习"
+delay = "0.2"
+
+[[params.skills]]
+name = "Seq2Seq"
+delay = "0.4"
+
+[[params.skills]]
+name = "数据分析"
+delay = "0.6"
+
+[[params.skills]]
+name = "Vue.js"
+delay = "0.8"
+
+[[params.skills]]
+name = "Docker"
+delay = "1"
+
+[[params.skills]]
+name = "Linux"
+delay = "1.2"
+
+[[params.skills]]
+name = "Git"
+delay = "1.4"
 
 # 社交图标
 [[params.socialIcons]]
@@ -48,7 +81,7 @@ title = "GitHub"
 url = "https://github.com/Du-Huan-1123"
 
 [[params.socialIcons]]
-name = "email"
+name = "envelope"
 title = "Email"
 url = "mailto:2060578353@qq.com"
 
@@ -61,28 +94,34 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-identifier = "archives"
-name = "📦 归档"
-url = "/archives/"
+identifier = "tech"
+name = "💻 技术分析"
+url = "/tech/"
 weight = 5
 
 [[menu.main]]
-identifier = "tags"
-name = "🏷️ 标签"
-url = "/tags/"
+identifier = "projects"
+name = "🚀 项目展示"
+url = "/projects/"
 weight = 10
+
+[[menu.main]]
+identifier = "archives"
+name = "📦 归档"
+url = "/archives/"
+weight = 15
 
 [[menu.main]]
 identifier = "search"
 name = "🔍 搜索"
 url = "/search/"
-weight = 15
+weight = 20
 
 [[menu.main]]
 identifier = "about"
 name = "👤 关于"
 url = "/about/"
-weight = 20
+weight = 25
 
 # 输出格式
 [outputs]

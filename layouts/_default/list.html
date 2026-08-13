@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="{{ .Site.BaseURL }}" class="logo">✨ {{ .Site.Title }}</a>
+                <ul class="nav-menu">
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="page-content">
+            {{ .Content }}
+            
+            <div class="posts-grid">
+                {{ range .Pages }}
+                <article class="post-card">
+                    {{ if .Params.cover }}
+                    <div class="post-cover">
+                        <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}">
+                    </div>
+                    {{ else }}
+                    <div class="post-cover gradient-bg"></div>
+                    {{ end }}
+                    <div class="post-content">
+                        <h3 class="post-title">
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </h3>
+                        <p class="post-summary">{{ .Summary | truncate 100 }}</p>
+                        <div class="post-meta">
+                            <span class="post-date">
+                                <i class="far fa-calendar"></i>
+                                {{ .Date.Format "2006-01-02" }}
+                            </span>
+                            {{ range .Params.tags }}
+                            <span class="post-tag">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </article>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Made with <span class="heart">❤️</span> and Hugo</p>
+    </footer>
+</body>
+</html>
