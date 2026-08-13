@@ -310,40 +310,50 @@ body {
 /* 浮动卡片 */
 .float-card {
     position: absolute;
-    bottom: 15%;
-    right: 0%;
     background: rgba(255, 255, 255, 0.95);
-    padding: 1rem 1.3rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     animation: floatCard 3s ease-in-out infinite;
+    z-index: 2;
 }
 
-@keyframes floatCard {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+.fc-icon {
+    font-size: 1.3rem;
 }
 
-.fc-now {
-    font-size: 0.7rem;
-    color: #999;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 0.2rem;
+.fc-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
 }
 
-.fc-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.15rem;
+.fc-1 {
+    top: 10%;
+    right: 5%;
+    animation-delay: 0s;
 }
 
-.fc-desc {
-    font-size: 0.8rem;
-    color: #666;
+.fc-2 {
+    top: 35%;
+    right: -5%;
+    animation-delay: 0.5s;
+}
+
+.fc-3 {
+    bottom: 35%;
+    left: -5%;
+    animation-delay: 1s;
+}
+
+.fc-4 {
+    bottom: 10%;
+    left: 5%;
+    animation-delay: 1.5s;
 }
 
 /* 最新文章 */
