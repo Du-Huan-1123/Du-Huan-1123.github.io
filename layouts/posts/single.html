@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/post.css" | relURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    {{ partial "navbar.html" . }}
+
+    <!-- 背景渐变 -->
+    <div class="bg-gradient"></div>
+    
+    <!-- 装饰气泡 -->
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+
+    <div class="post-container">
+        <!-- 返回按钮 -->
+        <a href="/tech/" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <span>返回文章列表</span>
+        </a>
+
+        <article class="post-single">
+            <!-- 文章头部 -->
+            <header class="post-header">
+                <div class="post-meta-top">
+                    <span class="post-date">
+                        <i class="far fa-calendar-alt"></i>
+                        {{ .Date.Format "2006-01-02" }}
+                    </span>
+                    {{ if .Params.tags }}
+                    <span class="post-tags">
+                        {{ range .Params.tags }}
+                        <span class="tag">{{ . }}</span>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+                <h1 class="post-title">{{ .Title }}</h1>
+                {{ if .Description }}
+                <p class="post-description">{{ .Description }}</p>
+                {{ end }}
+                <div class="post-meta-bottom">
+                    <span class="reading-time">
+                        <i class="far fa-clock"></i>
+                        {{ .ReadingTime }} 分钟阅读
+                    </span>
+                    <span class="word-count">
+                        <i class="far fa-file-word"></i>
+                        {{ .WordCount }} 字
+                    </span>
+                </div>
+            </header>
+
+            <!-- 目录 -->
+            {{ if .Params.ShowToc | default true }}
+            {{ if gt (len .TableOfContents) 100 }}
+            <div class="toc">
+                <h3 class="toc-title">📑 目录</h3>
+                {{ .TableOfContents }}
+            </div>
+            {{ end }}
+            {{ end }}
+
+            <!-- 文章内容 -->
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+
+            <!-- 文章底部 -->
+            <footer class="post-footer">
+                <!-- 标签 -->
+                {{ if .Params.tags }}
+                <div class="post-tags-list">
+                    <span class="tags-label">🏷️ 标签</span>
+                    <div class="tags">
+                        {{ range .Params.tags }}
+                        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag-link">{{ . }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- 上下篇导航 -->
+                <div class="post-nav">
+                    {{ if .PrevInSection }}
+                    <a href="{{ .PrevInSection.Permalink }}" class="nav-link nav-prev">
+                        <span class="nav-label">← 上一篇</span>
+                        <span class="nav-title">{{ .PrevInSection.Title }}</span>
+                    </a>
+                    {{ end }}
+                    {{ if .NextInSection }}
+                    <a href="{{ .NextInSection.Permalink }}" class="nav-link nav-next">
+                        <span class="nav-label">下一篇 →</span>
+                        <span class="nav-title">{{ .NextInSection.Title }}</span>
+                    </a>
+                    {{ end }}
+                </div>
+            </footer>
+        </article>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Made with ❤️</p>
+    </footer>
+</body>
+</html>

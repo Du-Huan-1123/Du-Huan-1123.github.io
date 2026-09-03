@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "css/home.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/tech.css" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -17,28 +18,48 @@
     <div class="bubble b1"></div>
     <div class="bubble b2"></div>
     <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
 
+    <!-- 页面头部 -->
     <div class="page-hero">
-        <h1 class="page-title">{{ .Title }}</h1>
-        <p class="page-desc">{{ .Content }}</p>
+        <h1 class="page-title">💻 技术文章</h1>
+        <p class="page-desc">记录技术学习与思考，分享实践经验</p>
     </div>
 
     <!-- 文章列表 -->
-    <section class="posts-section">
-        <div class="posts-grid">
-            {{ range .Pages }}
-            <a href="{{ .Permalink }}" class="post-card">
-                <h3>{{ .Title }}</h3>
-                <p>{{ .Summary | truncate 120 }}</p>
-                <div class="post-meta">
-                    <span>{{ .Date.Format "2006-01-02" }}</span>
-                    {{ range first 2 .Params.tags }}
-                    <span class="tag">{{ . }}</span>
-                    {{ end }}
+    <section class="tech-posts-section">
+        <div class="tech-posts-list">
+            {{ range (where .Site.RegularPages "Section" "posts") }}
+            <a href="{{ .Permalink }}" class="tech-post-card">
+                <div class="tech-post-date">
+                    <span class="date-day">{{ .Date.Format "02" }}</span>
+                    <span class="date-month">{{ .Date.Format "2006.01" }}</span>
+                </div>
+                <div class="tech-post-body">
+                    <h3 class="tech-post-title">{{ .Title }}</h3>
+                    <p class="tech-post-summary">{{ .Summary | truncate 120 }}</p>
+                    <div class="tech-post-meta">
+                        {{ range .Params.tags }}
+                        <span class="tech-tag">{{ . }}</span>
+                        {{ end }}
+                        <span class="tech-reading-time">
+                            <i class="far fa-clock"></i> {{ .ReadingTime }} 分钟
+                        </span>
+                    </div>
+                </div>
+                <div class="tech-post-arrow">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
             </a>
             {{ end }}
         </div>
+
+        {{ if eq (len (where .Site.RegularPages "Section" "posts")) 0 }}
+        <div class="tech-empty">
+            <span class="tech-empty-icon">📝</span>
+            <p>暂无文章，敬请期待...</p>
+        </div>
+        {{ end }}
     </section>
 
     <footer class="footer">
