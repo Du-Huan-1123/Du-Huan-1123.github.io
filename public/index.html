@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-	<meta name="generator" content="Hugo 0.164.0">
+	<meta name="generator" content="Hugo 0.164.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>技术分享</title>
@@ -10,40 +10,71 @@
 </head>
 <body>
     
-    <div class="bg-gradient"></div>
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">✨ 杜奂的技术博客</a>
+        <ul class="nav-menu">
+            <li><a href="/" class="active">首页</a></li>
+            <li><a href="/about/" >关于我</a></li>
+            <li><a href="/tech/" >技术文章</a></li>
+            <li><a href="/projects/" >项目展示</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
+
+
+    
+    <div class="bg-gradient"></div>
+    
     
     <div class="bubble b1"></div>
     <div class="bubble b2"></div>
     <div class="bubble b3"></div>
     <div class="bubble b4"></div>
-    <div class="bubble b5"></div>
-    <div class="bubble b6"></div>
 
     <div class="hero">
         
         <div class="hero-text">
             <h1 class="main-title">
                 Hi,<br>
-                我是 Du Huan
+                我是杜奂
             </h1>
 
-            <p class="role-title">AI应用开发 / AI算法 / Agent</p>
+            <p class="role-title">AI应用开发工程师</p>
 
             <div class="file-box">
-                <span class="file-label">MY FILE</span>
-                <p class="file-desc">专注于大模型应用开发，涵盖医疗场景、文档质控、情感分析与交通预测等领域。热爱用技术解决实际问题，持续学习，持续成长。</p>
+                <span class="file-label">ABOUT ME</span>
+                <p class="file-desc">专注于大模型应用开发、医疗自然语言处理与智能质控。热爱用AI技术解决实际问题，持续学习，持续成长。</p>
             </div>
 
             <div class="skill-pills">
-                <span class="pill">Python</span>
-                <span class="pill">深度学习</span>
-                <span class="pill">数据分析</span>
-                <span class="pill">Vue.js</span>
-                <span class="pill">Docker</span>
-                <span class="pill">Git</span>
                 <span class="pill">LLM</span>
                 <span class="pill">Agent</span>
+                <span class="pill">RAG</span>
+                <span class="pill">Python</span>
+                <span class="pill">FastAPI</span>
+                <span class="pill">PyTorch</span>
+                <span class="pill">Docker</span>
+                <span class="pill">知识图谱</span>
             </div>
 
             <div class="hero-btns">
@@ -56,33 +87,119 @@
         <div class="hero-photo-area">
             <div class="photo-bg-circle"></div>
             <div class="photo-cutout">
-                <img src="/images/avatar.jpg" alt="Du Huan" class="hero-img">
+                <img src="/images/avatar.jpg" alt="杜奂" class="hero-img">
             </div>
             <div class="float-card fc-1">
                 <div class="fc-icon">🏥</div>
-                <div class="fc-text">AI 医疗</div>
+                <div class="fc-text">医疗质控</div>
             </div>
             <div class="float-card fc-2">
-                <div class="fc-icon">📄</div>
-                <div class="fc-text">AI 文档质控</div>
+                <div class="fc-icon">🤖</div>
+                <div class="fc-text">AI Agent</div>
             </div>
             <div class="float-card fc-3">
-                <div class="fc-icon">💬</div>
-                <div class="fc-text">AI 情感分类</div>
+                <div class="fc-icon">📊</div>
+                <div class="fc-text">数据分析</div>
             </div>
             <div class="float-card fc-4">
-                <div class="fc-icon">🚗</div>
-                <div class="fc-text">AI 交通预测</div>
+                <div class="fc-icon">🔍</div>
+                <div class="fc-text">RAG检索</div>
             </div>
         </div>
     </div>
+
+    
+    <section class="skills-section">
+        <h2 class="section-title">💡 核心能力</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-icon">🧠</div>
+                <h3>大模型应用</h3>
+                <p>Prompt Engineering、Function Calling、Agent Workflow、JSON结构化输出</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-icon">🔎</div>
+                <h3>检索增强</h3>
+                <p>BM25、向量检索、RRF融合、Cross-Encoder重排序、Hybrid RAG</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-icon">📈</div>
+                <h3>机器学习</h3>
+                <p>PyTorch、Transformer、Seq2Seq、特征工程、模型评测</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-card-icon">⚙️</div>
+                <h3>工程化</h3>
+                <p>FastAPI、Docker、Linux、Git、日志监控、断点续跑</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="projects-section">
+        <h2 class="section-title">🚀 项目亮点</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🏥</div>
+                <h3>疾控死因链智能预测</h3>
+                <p>设计医疗死因链推理Agent，根本死因预测准确率达78.42%</p>
+                <div class="project-tags">
+                    <span>Agent</span>
+                    <span>医疗NLP</span>
+                    <span>ICD-10</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">📄</div>
+                <h3>医疗智能质控系统</h3>
+                <p>支持148条质控指标与100余条控费规则的自动检测</p>
+                <div class="project-tags">
+                    <span>RAG</span>
+                    <span>Function Calling</span>
+                    <span>FastAPI</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">📰</div>
+                <h3>舆情分类系统</h3>
+                <p>构建1,973条合法四级标签路径，0条非法路径</p>
+                <div class="project-tags">
+                    <span>BM25</span>
+                    <span>向量检索</span>
+                    <span>规则引擎</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="achievements-section">
+        <h2 class="section-title">🏆 科研成果</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <i class="fas fa-file-alt"></i>
+                <h4>论文</h4>
+                <p>第一作者《CEDAR》（审稿中）</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-lightbulb"></i>
+                <h4>专利</h4>
+                <p>申请发明专利3项</p>
+            </div>
+            <div class="achievement-card">
+                <i class="fas fa-trophy"></i>
+                <h4>荣誉</h4>
+                <p>国家励志奖学金、上海市优秀毕业生</p>
+            </div>
+        </div>
+    </section>
 
     
     <section class="latest-section">
         <h2 class="section-title">📝 最新文章</h2>
         <div class="posts-grid">
             
-            <a href="https://du-huan-1123.github.io/posts/hello-world/" class="post-card">
+            <a href="http://localhost:1313/posts/hello-world/" class="post-card">
                 <h3>Hello World - 我的第一篇博客</h3>
                 <p>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</p>
                 <div class="post-meta">
@@ -95,7 +212,7 @@
                 </div>
             </a>
             
-            <a href="https://du-huan-1123.github.io/posts/hermes-agent-intro/" class="post-card">
+            <a href="http://localhost:1313/posts/hermes-agent-intro/" class="post-card">
                 <h3>Hermes Agent 介绍与安装部署指南</h3>
                 <p>Hermes Agent 是由 Nous Research 开发的开源 AI Agent 框架，支持跨平台、可执行、可记忆、可扩展。本文介绍其核心特性和 …</p>
                 <div class="post-meta">
@@ -114,5 +231,12 @@
     <footer class="footer">
         <p>&copy; 2026 Du Huan. Made with ❤️</p>
     </footer>
+
+    <script>
+        
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

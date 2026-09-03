@@ -106,12 +106,6 @@ url = "/projects/"
 weight = 10
 
 [[menu.main]]
-identifier = "archives"
-name = "📦 归档"
-url = "/archives/"
-weight = 15
-
-[[menu.main]]
 identifier = "search"
 name = "🔍 搜索"
 url = "/search/"

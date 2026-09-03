@@ -1,0 +1,31 @@
+<!-- 导航栏 -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">✨ 杜奂的技术博客</a>
+        <ul class="nav-menu">
+            <li><a href="/" {{ if eq .RelPermalink "/" }}class="active"{{ end }}>首页</a></li>
+            <li><a href="/about/" {{ if eq .RelPermalink "/about/" }}class="active"{{ end }}>关于我</a></li>
+            <li><a href="/tech/" {{ if eq .RelPermalink "/tech/" }}class="active"{{ end }}>技术文章</a></li>
+            <li><a href="/projects/" {{ if eq .RelPermalink "/projects/" }}class="active"{{ end }}>项目展示</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<script>
+    // 移动端导航菜单切换
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>

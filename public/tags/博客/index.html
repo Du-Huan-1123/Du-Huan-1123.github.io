@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客 | 技术分享</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="https://du-huan-1123.github.io/" class="logo">✨ 技术分享</a>
-                <ul class="nav-menu">
-                    
-                    <li><a href="/">🏠 首页</a></li>
-                    
-                    <li><a href="/tech/">💻 技术分析</a></li>
-                    
-                    <li><a href="/projects/">🚀 项目展示</a></li>
-                    
-                    <li><a href="/archives/">📦 归档</a></li>
-                    
-                    <li><a href="/search/">🔍 搜索</a></li>
-                    
-                    <li><a href="/about/">👤 关于</a></li>
-                    
-                </ul>
-            </div>
-        </nav>
-    </header>
+    
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">✨ 杜奂的技术博客</a>
+        <ul class="nav-menu">
+            <li><a href="/" >首页</a></li>
+            <li><a href="/about/" >关于我</a></li>
+            <li><a href="/tech/" >技术文章</a></li>
+            <li><a href="/projects/" >项目展示</a></li>
+            <li><a href="/archives/" >归档</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
 
-    <main class="page-container">
-        <section class="page-content">
-            
-            
-            <div class="posts-grid">
-                
-                <article class="post-card">
-                    
-                    <div class="post-cover gradient-bg"></div>
-                    
-                    <div class="post-content">
-                        <h3 class="post-title">
-                            <a href="https://du-huan-1123.github.io/posts/hello-world/">Hello World - 我的第一篇博客</a>
-                        </h3>
-                        <p class="post-summary">这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</p>
-                        <div class="post-meta">
-                            <span class="post-date">
-                                <i class="far fa-calendar"></i>
-                                2026-07-09
-                            </span>
-                            
-                            <span class="post-tag">博客</span>
-                            
-                            <span class="post-tag">Hugo</span>
-                            
-                            <span class="post-tag">开始</span>
-                            
-                        </div>
-                    </div>
-                </article>
-                
-            </div>
-        </section>
-    </main>
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Du Huan. Made with <span class="heart">❤️</span> and Hugo</p>
+
+    
+    <div class="bg-gradient"></div>
+    
+    
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+
+    <div class="page-hero">
+        <h1 class="page-title">博客</h1>
+        <p class="page-desc"></p>
+    </div>
+
+    
+    <section class="posts-section">
+        <div class="posts-grid">
+            
+            <a href="http://localhost:1313/posts/hello-world/" class="post-card">
+                <h3>Hello World - 我的第一篇博客</h3>
+                <p>这是我的第一篇博客文章，记录搭建 Hugo 博客的过程。</p>
+                <div class="post-meta">
+                    <span>2026-07-09</span>
+                    
+                    <span class="tag">博客</span>
+                    
+                    <span class="tag">Hugo</span>
+                    
+                </div>
+            </a>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Du Huan. Made with ❤️</p>
     </footer>
 </body>
 </html>

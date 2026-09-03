@@ -1,59 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👤 关于我 | 技术分享</title>
-    <link rel="stylesheet" href="/css/about.css">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/about.css" | relURL }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="/" class="nav-logo">✨ 杜奂的技术博客</a>
-        <ul class="nav-menu">
-            <li><a href="/" >首页</a></li>
-            <li><a href="/about/" class="active">关于我</a></li>
-            <li><a href="/tech/" >技术文章</a></li>
-            <li><a href="/projects/" >项目展示</a></li>
-        </ul>
-        <div class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
+    {{ partial "navbar.html" . }}
 
-<script>
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.nav-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (navToggle) {
-            navToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-    });
-</script>
-
-
-    
+    <!-- 背景渐变 -->
     <div class="bg-gradient"></div>
     
-    
+    <!-- 装饰气泡 -->
     <div class="bubble b1"></div>
     <div class="bubble b2"></div>
     <div class="bubble b3"></div>
 
     <div class="about-container">
-        
+        <!-- 头部介绍 -->
         <section class="about-hero">
             <div class="about-avatar">
-                <img src="/images/avatar.jpg" alt="杜奂">
+                <img src="{{ "images/avatar.jpg" | relURL }}" alt="杜奂">
             </div>
             <div class="about-intro">
                 <h1>杜奂</h1>
@@ -67,7 +36,7 @@
             </div>
         </section>
 
-        
+        <!-- 教育背景 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-graduation-cap"></i> 教育背景</h2>
             <div class="timeline">
@@ -92,7 +61,7 @@
             </div>
         </section>
 
-        
+        <!-- 核心技术 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-code"></i> 核心技术</h2>
             <div class="skills-grid">
@@ -160,7 +129,7 @@
             </div>
         </section>
 
-        
+        <!-- 实习经历 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-briefcase"></i> 实习经历</h2>
             <div class="timeline">
@@ -192,7 +161,7 @@
             </div>
         </section>
 
-        
+        <!-- 项目经历 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-rocket"></i> 项目经历</h2>
             <div class="projects-grid">
@@ -235,7 +204,7 @@
             </div>
         </section>
 
-        
+        <!-- 科研成果 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-award"></i> 科研成果及荣誉</h2>
             <div class="achievements">
@@ -270,7 +239,7 @@
             </div>
         </section>
 
-        
+        <!-- 博客信息 -->
         <section class="about-section">
             <h2 class="section-title"><i class="fas fa-blog"></i> 关于这个博客</h2>
             <div class="blog-info">
@@ -286,7 +255,7 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 Du Huan. Made with ❤️</p>
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. Made with ❤️</p>
     </footer>
 </body>
 </html>
